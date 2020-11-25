@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <title>Railway Reservation System</title>
+</head>
+    <body>
+      <h1 style="text-align:center;">Railway Reservation System</h1>
+      <div>
+      <h2 style="text-align:center;">Booking Agent Page</h2>
+      <h4 style="text-align:center;"><form action="/ad"><input type="submit" class="button" value="Go to Admin page"/></form></h4>
+      </div>
+
+      <div><p>If you are a new agent then first <form action="/register"><input type="submit" class="button" value="register"/></form></p></div>
+    	
+      <div>
+        <h2>Book Ticket</h2>
+        <form action="/book" method="post">
+          <p>Agent ID <input type="number" name="agent_id" id="agent_id" placeholder="e.g. 123" required/></p>
+          <p>Train Number <input type="number" name="train" id="train" placeholder="e.g. 1234" required/></p>
+          <p>Date of Journey <input type="date" name="date" id="date" required/></p>
+          <p>Coach Type <input type="text" name="coach_type" id="coach_type" placeholder="AC/SL" required/></p>
+          <p>Number of Passengers <input type="number" name="Passengers" id="Passengers" placeholder="e.g. 2" required/></p>
+          <input type="submit" class="button" value="Proceed"/>
+        </form>
+    
+    <br>
+</div>
+      <div>
+        <h2>View Ticket</h2>
+        <form action="/view" method="post">
+          <p>PNR <input type="number" name="pnr" id="pnr" placeholder="e.g. 123456" required/></p>
+          <input type="submit" class="button" value="View"/>
+        </form>
+    </div>
+    
+
+    
+    
+</body>
+</html>

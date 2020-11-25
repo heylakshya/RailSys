@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <title>Railway Reservation System</title>
+</head>
+    <body>
+      <h1 style="text-align:center;">Railway Reservation System</h1>
+      <div>
+      <h2 style="text-align:center;">Admin Page</h2>
+      <h4 style="text-align:center;"><form action="/"><input type="submit" class="button" value="Go to Booking Agent page"/></form></h4>
+      </div>
+
+	<div class="box">
+  			<h2>Release Train in the Booking System</h2>
+  			<form action="/admin" method="post">
+          <p>Train Number <input type="number" name="train" id="train" placeholder="e.g. 1234" required/></p>
+          <p>Date of Journey <input type="date" name="date" id="date" required/></p>
+          <p>Number of AC coaches <input type="number" name="ac" id="ac" placeholder="e.g. 12" required/></p>
+          <p>Number of Sleeper coaches <input type="number" name="sl" id="sl" placeholder="e.g. 12" required/></p>
+          <input type="submit" class="button" value="Release"/>
+        </form>
+		</div>
+
+  {%if trains%}
+    <div class="users" style="margin-left:0%">
+      <h2>Released trains:</h2>
+      <table style="width:20%">
+        <tr>
+            <th>Train Number</th><th>Date of Journey</th>
+        </tr>
+        {%for train in trains%}
+          <tr>
+            <td style="text-align:center">{{train[0]}}</td><td style="text-align:center">{{train[1]}}</td>
+          </tr>   
+        {%endfor%}
+      </table>
+    </div>
+    {%endif%}
+
+</body>
+</html>

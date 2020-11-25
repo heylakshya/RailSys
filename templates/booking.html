@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <title>Railway Reservation System</title>
+</head>
+<body>
+  {{passengers}} passenger(s) details remaining to add. PNR: {{pnr}}
+    <div>
+        <h1>Add passenger details</h1>
+        <form action="/passen" method="post">
+          <input type="hidden" id="passenger_count" name="passenger_count" value="{{passengers}}">
+          <input type="hidden" id="pnr" name="pnr" value="{{pnr}}">
+          <input type="hidden" id="coach_type" name="coach_type" value="{{coach_type}}">
+          <p>Name <input type="text" name="pass_name" id="pass_name" placeholder="Akash" required/></p>
+          <input type="submit" class="button" value="Add passenger"/>
+        </form>
+    </div>
+</body>
+</html>

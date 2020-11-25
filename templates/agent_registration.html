@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <title>Railway Reservation System</title>
+</head>
+<body>
+	<div class="box">
+    <h4><form action="/"><input type="submit" class="button" value="Go to Booking Agent page"/></form></h4>
+  			<h1>New Agent Registration</h1>
+
+  			
+  			<form action="/agent" method="post">
+          <p>ID <input type="number" name="agent_id" id="agent_id" placeholder="e.g. 123" required/></p>
+    			<p>Name <input type="text" name="agent_name" id="agent_name" placeholder="Shayam" required/></p>
+    			<p>Credit Card Number <input type="number" name="credit_card" id="credit_card" placeholder="XXXX XXXX XXXX" required/></p>
+          <p>Address <input type="text" name="address" id="address" placeholder="Street number, City name" required/></p>
+    			<input type="submit" class="button" value="Register"/>
+  			</form>
+		</div>
+</body>
+</html>
